@@ -12,6 +12,7 @@ class Country extends Component {
         // console.log(res);
         this.setState({ countries: res });
     }
+    
     render() {
         let c = 0;
 

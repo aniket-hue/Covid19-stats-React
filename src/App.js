@@ -8,7 +8,7 @@ import image from './images/image.png';
 class App extends Component {
     state = {
         data: null,
-        country :'',
+        country: '',
     }
     async componentDidMount() {
         const data = await fetchData();
@@ -17,19 +17,25 @@ class App extends Component {
         // console.log(this.state.data)
     }
 
-     handleCountryChange = async(Country) => {
-         const data = await fetchCountry(Country);
-         this.setState({ data: data, country: Country });
-        console.log(data);
+    handleCountryChange = async (Country) => {
+        if (Country !== "Global") {
+            const data = await fetchCountry(Country);
+            this.setState({ data: data, country: Country });
+            console.log(data);
+        }
+        else {
+            const data = await fetchData();
+            this.setState({ data: data });
+        }
     }
 
     render() {
         return (
             <div className={classes.container}>
-                <img src = {image}/>
+                <img src={image} />
                 <Cards data={this.state.data} />
                 <Country handleCountry={this.handleCountryChange} />
-                <Chart />
+                <Chart country = {this.state.country} />
             </div>
         );
     }

@@ -23,7 +23,6 @@ const Cards = (props) => {
                                 />
                             </Typography>
                             <Typography color="textSecondary">{new Date(props.data['lastUpdate']).toDateString()}</Typography>
-                            <Typography varian="body2"  component="p">Number of active cases</Typography>
                         </CardContent>
                     </Grid>
 
@@ -38,7 +37,6 @@ const Cards = (props) => {
                                     seperator=","
                                 /></Typography>
                             <Typography color="textSecondary">{new Date(props.data['lastUpdate']).toDateString()}</Typography>
-                            <Typography varian="body2"  component="p">Number of Recovered cases</Typography>
                         </CardContent>
                     </Grid>
 
