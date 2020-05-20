@@ -16,7 +16,7 @@ class Chart extends Component {
 
         const countryD = await Promise.all(promises);
 
-        console.log(countryD);
+        // console.log(countryD);
 
 
         this.setState({ dailyData: fetch, countryData: countryD });
@@ -26,7 +26,7 @@ class Chart extends Component {
 
 
     render() {
-        console.log(this.props.country);
+        // console.log(this.props.country);
         const barChart = (
             this.props.country !== '' ?
                 <Bar
