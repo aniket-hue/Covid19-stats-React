@@ -33,7 +33,7 @@ const Cards = (props) => {
                             <Typography variant="h5"  component="h2">
                                 <CountUp
                                     start={0}
-                                    end={props.data['confirmed']['value']}
+                                    end={props.data['recovered']['value']}
                                     duration={2.5}
                                     seperator=","
                                 /></Typography>
@@ -48,7 +48,7 @@ const Cards = (props) => {
                             <Typography variant="h5" component="h2" >
                                 <CountUp
                                     start={0}
-                                    end={props.data['confirmed']['value']}
+                                    end={props.data['deaths']['value']}
                                     duration={2.5}
                                     seperator=","
                                 /></Typography>
